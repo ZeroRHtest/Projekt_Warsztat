@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class Zadania_Warsztat {
 
@@ -223,7 +224,33 @@ Hello hello Ab aB*/
 
     }
 
+    public static void Zadanie_9(){
 
+        Scanner sc = new Scanner("5\n" +
+                "5 41 77 74 22 44\n" +
+                "1 12\n" +
+                "4 37 34 36 52\n" +
+                "0\n" +
+                "3 20 22 33\n" +
+                "5\n" +
+                "1 3\n" +
+                "3 4\n" +
+                "3 1\n" +
+                "4 3\n" +
+                "5 5");
+
+        ArrayList<ArrayList<Integer>> numbers = new ArrayList<>();
+        int numberQnt = Integer.valueOf(sc.nextLine());
+
+        for (int i=0; i<numberQnt; i++){
+            List<Integer> list = Arrays.asList(sc.nextLine().split(" "))
+
+                    .stream().map(x -> Integer.parseInt(x)).collect(Collectors.toList());
+            numbers.add(new ArrayList<>(list);
+        }
+
+
+    }
 
 }
 
