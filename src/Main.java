@@ -9,7 +9,7 @@ public class Main {
         //Zadania_Warsztat.Zadanie_6();
         //Zadania_Warsztat.Zadanie_7();
         //Zadania_Warsztat.Zadanie_8();
-        Zadania_Warsztat.Zadanie_9();
-
+        //Zadania_Warsztat.Zadanie_9();
+        Zadania_Warsztat.Zadanie_10();
     }
 }

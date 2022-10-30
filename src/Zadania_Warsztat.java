@@ -226,30 +226,68 @@ Hello hello Ab aB*/
 
     public static void Zadanie_9(){
 
-        Scanner sc = new Scanner("5\n" +
-                "5 41 77 74 22 44\n" +
-                "1 12\n" +
-                "4 37 34 36 52\n" +
-                "0\n" +
-                "3 20 22 33\n" +
-                "5\n" +
-                "1 3\n" +
-                "3 4\n" +
-                "3 1\n" +
-                "4 3\n" +
-                "5 5");
+        Scanner sc = new Scanner("""
+                5
+                5 41 77 74 22 44
+                1 12
+                4 37 34 36 52
+                0
+                3 20 22 33
+                5
+                1 3
+                3 4
+                3 1
+                4 3
+                5 5""");
 
-        ArrayList<ArrayList<Integer>> numbers = new ArrayList<>();
-        int numberQnt = Integer.valueOf(sc.nextLine());
+        ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
+        int n = sc.nextInt();
 
-        for (int i=0; i<numberQnt; i++){
-            List<Integer> list = Arrays.asList(sc.nextLine().split(" "))
+        while (n-- > 0){
+            int m = sc.nextInt();
+            ArrayList<Integer> line = new ArrayList<>();
+            for(int i=0; i<m;i++){
+                line.add(sc.nextInt());
+            }
+            arr.add(line);
 
-                    .stream().map(x -> Integer.parseInt(x)).collect(Collectors.toList());
-            numbers.add(new ArrayList<>(list);
+        }
+
+        int t = sc.nextInt();
+        for(int i=0; i<t; i++){
+
+            try {
+                System.out.println(arr.get(sc.nextInt()-1).get(sc.nextInt()-1));
+            } catch (Exception e){
+                System.out.println("ERROR!");
+            }
+
         }
 
 
+    }
+
+
+    public static  boolean canWin(int leap, int[] game){
+
+        return true;
+    }
+    public  static void Zadanie_10(){ //
+
+        Scanner scan = new Scanner("");
+        int q = scan.nextInt();
+        while (q-- > 0) {
+            int n = scan.nextInt();
+            int leap = scan.nextInt();
+
+            int[] game = new int[n];
+            for (int i = 0; i < n; i++) {
+                game[i] = scan.nextInt();
+            }
+
+            System.out.println( (canWin(leap, game)) ? "YES" : "NO" );
+        }
+        scan.close();
     }
 
 }
