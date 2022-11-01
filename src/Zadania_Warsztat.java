@@ -1,13 +1,9 @@
-import org.w3c.dom.ls.LSInput;
-
-import java.math.BigInteger;
-import java.security.MessageDigest;
+import java.lang.reflect.Method;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class Zadania_Warsztat {
 
@@ -290,7 +286,108 @@ Hello hello Ab aB*/
         scan.close();
     }
 
+    public static void Zadanie_11(int...a){
+       try {
+           String s = "";
+           int r = 0;
+           for(int i : a){
+               r+=i;
+               s+=String.valueOf(i)+"+";
+           }
+           System.out.println(s.substring(0,s.length()-1)+"="+r);
+       } catch (Exception e){
+           System.out.println(e);
+       }
+
+    }
+    public static void Zadanie_12(){
+
+        Class c = Student.class;
+        Method[] m = c.getDeclaredMethods();
+        for(int i=0; i<m.length;i++){
+            System.out.println(m[i].getName().toString());
+        }
+
+    }
+
+    public static void Dodatkowe(){
+        Scanner sc = new Scanner("ahqym\n" +
+                "amftc\n" +
+                "anotherfunction\n" +
+                "atcks\n" +
+                "bwkbd\n" +
+                "cfwyc\n" +
+                "cmkxa\n" +
+                "dnpym\n" +
+                "dnqvo\n" +
+                "dvvwq\n" +
+                "ehjdm\n" +
+                "elyed\n" +
+                "fmyce\n" +
+                "getEmail\n" +
+                "getId\n" +
+                "getName\n" +
+                "ghtlj\n" +
+                "hluvb\n" +
+                "isqdf\n" +
+                "iwhtf\n" +
+                "jmopy\n" +
+                "jnskt\n" +
+                "kbjlt\n" +
+                "kgwku\n" +
+                "khuag\n" +
+                "levtp\n" +
+                "mcgme\n" +
+                "migyc\n" +
+                "moebl\n" +
+                "nixhb\n" +
+                "odyqp\n" +
+                "ogvdl\n" +
+                "ormim\n" +
+                "piwro\n" +
+                "plaob\n" +
+                "pnruo\n" +
+                "pqfct\n" +
+                "ptrup\n" +
+                "pvgyp\n" +
+                "qthde\n" +
+                "rmjig\n" +
+                "setEmail\n" +
+                "setId\n" +
+                "setName\n" +
+                "sumvl\n" +
+                "tkbpp\n" +
+                "tntpj\n" +
+                "toxdp\n" +
+                "twyfa\n" +
+                "uccfq\n" +
+                "ujxei\n" +
+                "vhxoi\n" +
+                "viwuu\n" +
+                "viyog\n" +
+                "whjtj\n" +
+                "ytijy");
+        while (sc.hasNext()){
+
+            System.out.println("public void "+ sc.nextLine() + "(){}");
+        }
+    }
+
+    public static void Zadanie_13(){
+
+    }
+
+
 }
+
+class Student{
+    public static void metoda_1(){}
+    public static void metoda_2(){}
+    public static void metoda_3(){}
+    public static void metoda_4(){}
+    public static void metoda_5(){}
+}
+
 
 
 
