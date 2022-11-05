@@ -267,11 +267,6 @@ Hello hello Ab aB*/
 
     }
 
-
-    public static  boolean canWin(int leap, int[] game){
-
-        return true;
-    }
     public  static void Zadanie_10(){ //
 
         Scanner scan = new Scanner("");
@@ -290,6 +285,10 @@ Hello hello Ab aB*/
         scan.close();
     }
 
+    public static  boolean canWin(int leap, int[] game){
+
+        return true;
+    }
     public static void Zadanie_11(int...a){
        try {
            String s = "";
@@ -304,6 +303,7 @@ Hello hello Ab aB*/
        }
 
     }
+
     public static void Zadanie_12(){
 
         Class c = Student.class;
@@ -376,9 +376,6 @@ Hello hello Ab aB*/
             System.out.println("public void "+ sc.nextLine() + "(){}");
         }
     }
-
-
-
 
     public static void Zadanie_13() {
         try {
