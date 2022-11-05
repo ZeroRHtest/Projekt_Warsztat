@@ -1,9 +1,13 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.lang.reflect.Method;
+import java.math.BigInteger;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import static java.lang.System.in;
 
 public class Zadania_Warsztat {
 
@@ -373,12 +377,129 @@ Hello hello Ab aB*/
         }
     }
 
-    public static void Zadanie_13(){
 
+
+
+    public static void Zadanie_13() {
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+            int n1 = Integer.parseInt(br.readLine());
+            int n2 = Integer.parseInt(br.readLine());
+            int n3 = Integer.parseInt(br.readLine());
+            int n4 = Integer.parseInt(br.readLine());
+            int n5 = Integer.parseInt(br.readLine());
+            Prime ob = new Prime();
+            ob.checkPrime(n1);
+            ob.checkPrime(n1, n2);
+            ob.checkPrime(n1, n2, n3);
+            ob.checkPrime(n1, n2, n3, n4, n5);
+            Method[] methods = Prime.class.getDeclaredMethods();
+            Set<String> set = new HashSet<>();
+            boolean overload = false;
+            for (int i = 0; i < methods.length; i++) {
+                if (set.contains(methods[i].getName())) {
+                    overload = true;
+                    break;
+                }
+                set.add(methods[i].getName());
+
+            }
+            if (overload) {
+                throw new Exception("Overloading not allowed");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public static void Zadanie_14(){
+
+        Scanner sc = new Scanner("11");
+
+
+
+    }
+    // Szkolny rodzaj sprawdzania liczb pierwszych
+    // Sprawdzanie pierwiastków w kolejnych iteracjach
+    // A naive solution is to iterate through all numbers from 2 to sqrt(n) and for every number check if it divides n. If we find any number that divides, we return false.
+    boolean prime_metoda_1(int n){
+        if (n <= 1)
+            return false;
+
+            // Check if number is 2
+        else if (n == 2)
+            return true;
+
+            // Check if n is a multiple of 2
+        else if (n % 2 == 0)
+            return false;
+
+        // If not, then just check the odds
+        for (int i = 3; i <= Math.sqrt(n); i += 2) {
+            if (n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+    void prime_metoda_2(int...n){
+
+
+        for(int i = 0; i<n.length; i++){
+            BigInteger bi = new BigInteger(String.valueOf(n[i]));
+
+            if(bi.isProbablePrime(1));
+            System.out.print(bi);
+
+
+        }
+        System.out.println();
+    }   //
+    boolean prime_metoda_3(int n){
+        if (n <= 1)
+            return false;
+
+            // Check if number is 2
+        else if (n == 2)
+            return true;
+
+            // Check if n is a multiple of 2
+        else if (n % 2 == 0)
+            return false;
+
+        // If not, then just check the odds
+        for (int i = 3; i <= Math.sqrt(n); i += 2) {
+            if (n % i == 0)
+                return false;
+        }
+
+        return true;
     }
 
 
+
+
+
+
+
 }
+
+
+final class Prime {
+
+    public static void checkPrime(int... a) {
+
+        for (int i = 0; i < a.length; i++) {
+            BigInteger bi = new BigInteger(String.valueOf(a[i]));
+
+            if (bi.isProbablePrime(1)){
+                System.out.printf("%s ", bi);
+            }
+        }
+        System.out.println();
+    }
+}
+
 
 class Student{
     public static void metoda_1(){}

@@ -15,5 +15,6 @@ public class Main {
         //Zadania_Warsztat.Zadanie_11(10,20,22,1,3,4,5);
         //Zadania_Warsztat.Zadanie_12();
         Zadania_Warsztat.Zadanie_13();
+        //Zadania_Warsztat.Zadanie_14();
     }
 }
