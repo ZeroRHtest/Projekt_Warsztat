@@ -17,7 +17,7 @@ public class Zadania_Warsztat {
             String tekst = LocalDate.of(2001,4,i+1).getDayOfWeek().name();
             System.out.printf("%-10.3s",tekst); System.out.println();
         }
-       // LocalDate.of().getDayOfWeek().name();
+        // LocalDate.of().getDayOfWeek().name();
         System.out.println();
 
 
@@ -419,6 +419,7 @@ Hello hello Ab aB*/
     // Szkolny rodzaj sprawdzania liczb pierwszych
     // Sprawdzanie pierwiastków w kolejnych iteracjach
     // A naive solution is to iterate through all numbers from 2 to sqrt(n) and for every number check if it divides n. If we find any number that divides, we return false.
+
     boolean prime_metoda_1(int n){
         if (n <= 1)
             return false;
@@ -440,14 +441,11 @@ Hello hello Ab aB*/
         return true;
     }
     void prime_metoda_2(int...n){
-
-
         for(int i = 0; i<n.length; i++){
-            BigInteger bi = new BigInteger(String.valueOf(n[i]));
 
+            BigInteger bi = new BigInteger(String.valueOf(n[i]));
             if(bi.isProbablePrime(1));
             System.out.print(bi);
-
 
         }
         System.out.println();
@@ -474,12 +472,8 @@ Hello hello Ab aB*/
     }
 
 
+} // Koniec klasy Zadania_Warsztat
 
-
-
-
-
-}
 
 
 final class Prime {

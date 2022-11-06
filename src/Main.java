@@ -16,5 +16,10 @@ public class Main {
         //Zadania_Warsztat.Zadanie_12();
         Zadania_Warsztat.Zadanie_13();
         //Zadania_Warsztat.Zadanie_14();
+        Zadania_Warsztat_v01.Zadanie_1();
+
+
+
+
     }
 }
